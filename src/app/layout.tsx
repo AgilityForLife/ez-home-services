@@ -267,11 +267,9 @@ const jsonLd = {
         },
       ],
       sameAs: [
-        // Add your actual social/directory profile URLs here as you create them
-        // "https://www.facebook.com/ezhomeservices",
-        // "https://www.instagram.com/ezhomeservices",
-        // "https://www.yelp.com/biz/ez-home-services-bloomfield",
-        // "https://www.bbb.org/us/nj/bloomfield/profile/ez-home-services",
+        "https://www.facebook.com/EZHomeServicesNJ",
+        "https://www.instagram.com/ezhomeservicesnj",
+        "https://www.yelp.com/biz/ez-home-services-bloomfield",
         "https://calendly.com/ezhomeservices",
       ],
       knowsAbout: [
