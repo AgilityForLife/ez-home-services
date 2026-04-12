@@ -125,10 +125,10 @@ const serviceJsonLd = {
           "@type": "LocalBusiness",
           name: "EZ Home Services",
         },
-        areaServed: {
-          "@type": "State",
-          name: "New Jersey",
-        },
+        areaServed: [
+          { "@type": "AdministrativeArea", name: "Central New Jersey" },
+          { "@type": "AdministrativeArea", name: "Northern New Jersey" },
+        ],
         offers: [
           {
             "@type": "Offer",
@@ -157,10 +157,10 @@ const serviceJsonLd = {
           "@type": "LocalBusiness",
           name: "EZ Home Services",
         },
-        areaServed: {
-          "@type": "State",
-          name: "New Jersey",
-        },
+        areaServed: [
+          { "@type": "AdministrativeArea", name: "Central New Jersey" },
+          { "@type": "AdministrativeArea", name: "Northern New Jersey" },
+        ],
         offers: [
           {
             "@type": "Offer",
@@ -189,10 +189,10 @@ const serviceJsonLd = {
           "@type": "LocalBusiness",
           name: "EZ Home Services",
         },
-        areaServed: {
-          "@type": "State",
-          name: "New Jersey",
-        },
+        areaServed: [
+          { "@type": "AdministrativeArea", name: "Central New Jersey" },
+          { "@type": "AdministrativeArea", name: "Northern New Jersey" },
+        ],
         offers: [
           {
             "@type": "Offer",
