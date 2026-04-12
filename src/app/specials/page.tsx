@@ -13,6 +13,9 @@ import {
   Calendar,
 } from "lucide-react";
 
+// Note: metadata export doesn't work in client components.
+// We'll use a separate metadata file for this page.
+
 const addOns = [
   { id: "screens", name: "Screen Cleaning (per screen)", price: 5, unit: "each" },
   { id: "tracks", name: "Track & Sill Deep Clean", price: 75, unit: "flat" },

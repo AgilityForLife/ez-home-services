@@ -10,6 +10,9 @@ import {
   Loader2,
 } from "lucide-react";
 
+// Note: metadata export doesn't work in client components.
+// We'll use a separate metadata file for this page.
+
 const serviceOptions = [
   { id: "ext_windows", label: "Exterior Window Cleaning (up to 30)", price: "$350" },
   { id: "int_ext_windows", label: "Interior & Exterior Windows (up to 30)", price: "$550" },

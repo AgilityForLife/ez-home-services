@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -8,6 +9,22 @@ import {
   Heart,
   Calendar,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "About Us | Veteran-Owned Exterior Cleaning in NJ",
+  description:
+    "EZ Home Services is a veteran-owned, licensed & insured exterior cleaning company serving Central & Northern New Jersey. Founded by Erick Rosa — PMP-certified project management professional.",
+  alternates: {
+    canonical: "https://ezhomeservices.business/about",
+  },
+  openGraph: {
+    title: "About EZ Home Services | Veteran-Owned in NJ",
+    description:
+      "Licensed & insured exterior cleaning. Veteran-owned with military discipline & work ethic. Serving 24+ communities across Central & Northern NJ.",
+    url: "https://ezhomeservices.business/about",
+    type: "website",
+  },
+};
 
 export default function AboutPage() {
   return (

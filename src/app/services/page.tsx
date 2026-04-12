@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import {
   Droplets,
@@ -8,6 +9,22 @@ import {
   Phone,
   Calendar,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Services & Pricing | Window Cleaning, Gutter & Pressure Washing",
+  description:
+    "Transparent pricing for professional window cleaning (from $350), gutter cleaning (from $175), and pressure washing (from $150) in Central & Northern NJ. No hidden fees. Free estimates.",
+  alternates: {
+    canonical: "https://ezhomeservices.business/services",
+  },
+  openGraph: {
+    title: "Services & Pricing | EZ Home Services",
+    description:
+      "Window cleaning, gutter maintenance & pressure washing with transparent pricing. Serving Central & Northern NJ.",
+    url: "https://ezhomeservices.business/services",
+    type: "website",
+  },
+};
 
 const services = [
   {
@@ -90,9 +107,120 @@ const addOns = [
   { name: "Surface Sealing", price: "From $200", desc: "Post-pressure wash protective seal" },
 ];
 
+// Service Schema for rich results
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "EZ Home Services — Services & Pricing",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      item: {
+        "@type": "Service",
+        name: "Window Cleaning",
+        description:
+          "Professional window cleaning service with streak-free results for residential and commercial properties. Water-fed pole systems and traditional squeegee techniques.",
+        provider: {
+          "@type": "LocalBusiness",
+          name: "EZ Home Services",
+        },
+        areaServed: {
+          "@type": "State",
+          name: "New Jersey",
+        },
+        offers: [
+          {
+            "@type": "Offer",
+            name: "Exterior Only (up to 30 windows)",
+            price: "350.00",
+            priceCurrency: "USD",
+          },
+          {
+            "@type": "Offer",
+            name: "Interior & Exterior (up to 30 windows)",
+            price: "550.00",
+            priceCurrency: "USD",
+          },
+        ],
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      item: {
+        "@type": "Service",
+        name: "Gutter Cleaning & Maintenance",
+        description:
+          "Thorough gutter cleaning service with debris removal, downspout flushing, and visual inspection to protect your home from water damage.",
+        provider: {
+          "@type": "LocalBusiness",
+          name: "EZ Home Services",
+        },
+        areaServed: {
+          "@type": "State",
+          name: "New Jersey",
+        },
+        offers: [
+          {
+            "@type": "Offer",
+            name: "Single-story home",
+            price: "175.00",
+            priceCurrency: "USD",
+          },
+          {
+            "@type": "Offer",
+            name: "Two-story home",
+            price: "250.00",
+            priceCurrency: "USD",
+          },
+        ],
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      item: {
+        "@type": "Service",
+        name: "Pressure Washing",
+        description:
+          "Professional pressure washing and soft washing for driveways, sidewalks, patios, decks, and house siding. Eco-friendly, biodegradable detergents.",
+        provider: {
+          "@type": "LocalBusiness",
+          name: "EZ Home Services",
+        },
+        areaServed: {
+          "@type": "State",
+          name: "New Jersey",
+        },
+        offers: [
+          {
+            "@type": "Offer",
+            name: "Driveway (standard 2-car)",
+            price: "200.00",
+            priceCurrency: "USD",
+          },
+          {
+            "@type": "Offer",
+            name: "House siding (soft wash)",
+            price: "450.00",
+            priceCurrency: "USD",
+          },
+        ],
+      },
+    },
+  ],
+};
+
 export default function ServicesPage() {
   return (
     <>
+      {/* Service Schema JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+
       {/* Hero */}
       <section className="relative pt-32 pb-16 md:pt-40 md:pb-24">
         <div className="absolute inset-0 bg-gradient-to-b from-blue-950/20 to-transparent" />

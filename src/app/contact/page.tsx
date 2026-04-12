@@ -1,9 +1,72 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Phone, Mail, MapPin, Clock, Calendar, ArrowRight } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Contact Us | Get a Free Estimate | (862) 202-0908",
+  description:
+    "Contact EZ Home Services for free window cleaning, gutter maintenance, and pressure washing estimates in Central & Northern NJ. Call (862) 202-0908 or schedule a remote Google Earth estimate.",
+  alternates: {
+    canonical: "https://ezhomeservices.business/contact",
+  },
+  openGraph: {
+    title: "Contact EZ Home Services | Free Estimates in NJ",
+    description:
+      "Reach out for a free, no-obligation quote. Call, email, or schedule a remote estimate via Google Earth.",
+    url: "https://ezhomeservices.business/contact",
+    type: "website",
+  },
+};
+
+// FAQ Schema for rich results in Google
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Do you provide free estimates?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes! All quotes are free and no-obligation. We can even estimate remotely using Google Earth.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What areas do you serve?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We serve all of Central and Northern New Jersey, including Essex, Morris, Bergen, Hudson, Union, Middlesex, and Somerset counties.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I pay with cash?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Absolutely! We accept Stripe (credit/debit) and cash. Cash payments receive a $50 discount.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are you insured?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we are fully licensed and insured for your protection.",
+      },
+    },
+  ],
+};
 
 export default function ContactPage() {
   return (
     <>
+      {/* FAQ Schema JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+
       {/* Hero */}
       <section className="relative pt-32 pb-16 md:pt-40 md:pb-24">
         <div className="absolute inset-0 bg-gradient-to-b from-blue-950/20 to-transparent" />
