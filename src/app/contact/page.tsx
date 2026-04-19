@@ -203,7 +203,7 @@ export default function ContactPage() {
                         View Online Specials
                       </p>
                       <p className="text-xs text-gray-500">
-                        $350 for 30 exterior windows &amp; more
+                        $425 for 30 exterior windows &amp; more
                       </p>
                     </div>
                     <ArrowRight className="w-5 h-5 text-gray-600 group-hover:text-blue-400 transition-colors" />

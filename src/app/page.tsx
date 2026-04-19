@@ -21,7 +21,7 @@ const services = [
     description:
       "Crystal-clear windows inside & out. Residential and commercial properties. We use professional-grade equipment for a streak-free shine every time.",
     features: ["Interior & Exterior", "Screen Cleaning", "Track & Sill Cleaning"],
-    price: "From $350",
+    price: "From $425",
   },
   {
     icon: Sparkles,
@@ -29,7 +29,7 @@ const services = [
     description:
       "Protect your home from water damage. Complete gutter cleaning, flushing, and minor repairs to keep your drainage system working perfectly.",
     features: ["Debris Removal", "Downspout Flushing", "Minor Repairs"],
-    price: "From $175",
+    price: "From $250",
   },
   {
     icon: Shield,
@@ -37,7 +37,7 @@ const services = [
     description:
       "Restore your property's curb appeal. Driveways, sidewalks, patios, decks, siding — we blast away years of grime safely and effectively.",
     features: ["Driveways & Walkways", "Decks & Patios", "House Siding"],
-    price: "From $150",
+    price: "From $225",
   },
 ];
 
@@ -62,9 +62,75 @@ const testimonials = [
   },
 ];
 
+const faqItems = [
+  {
+    question: "How much does window cleaning cost in NJ?",
+    answer:
+      "EZ Home Services offers exterior window cleaning starting at $425 for up to 30 windows. Interior & exterior cleaning starts at $625. Stack our Google review discount ($50 off) and cash payment discount ($50 off) to pay as low as $325.",
+  },
+  {
+    question: "Are you licensed and insured in New Jersey?",
+    answer:
+      "Yes, EZ Home Services is fully licensed and insured in New Jersey. We are a veteran-owned business providing professional exterior cleaning services across Central & Northern NJ.",
+  },
+  {
+    question: "What areas in New Jersey do you serve?",
+    answer:
+      "We serve 22+ cities across Central & Northern New Jersey including Montclair, Morristown, Summit, Bloomfield, West Orange, Livingston, Maplewood, Chatham, Madison, Short Hills, Glen Ridge, Caldwell, Verona, Cedar Grove, Parsippany, Wayne, Fair Lawn, Ridgewood, Hoboken, Jersey City, Newark, and New Brunswick.",
+  },
+  {
+    question: "Do you offer same-week scheduling?",
+    answer:
+      "Yes! EZ Home Services offers same-week scheduling with flexible morning slots Monday through Friday (7am–6pm) and Saturday (8am–4pm). Call (862) 202-0908 or book online for a free quote.",
+  },
+  {
+    question: "What is the difference between soft washing and pressure washing?",
+    answer:
+      "Pressure washing uses high-pressure water to blast away dirt and grime — best for driveways, sidewalks, and tough stains. Soft washing uses lower pressure with eco-friendly biodegradable detergents — safer for house siding, roofs, and delicate surfaces. We use both methods based on what your property needs.",
+  },
+  {
+    question: "How long does window cleaning take?",
+    answer:
+      "Most homes take 2–4 hours for exterior window cleaning depending on the number of windows and their condition. Interior & exterior cleaning may take 4–6 hours. We provide an accurate time estimate when you book.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map(({ question, answer }) => ({
+    "@type": "Question",
+    name: question,
+    acceptedAnswer: { "@type": "Answer", text: answer },
+  })),
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://ezhomeservices.business",
+    },
+  ],
+};
+
 export default function Home() {
   return (
     <>
+      {/* Structured Data — FAQPage + BreadcrumbList */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-950 via-blue-950/30 to-gray-950" />
@@ -80,13 +146,11 @@ export default function Home() {
             backgroundSize: "60px 60px",
           }}
         />
-
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-sm font-medium mb-8">
             <Sparkles className="w-4 h-4" />
-            Online Special — $350 for up to 30 Exterior Windows
+            Online Special — $425 for up to 30 Exterior Windows
           </div>
-
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-white max-w-5xl mx-auto leading-[1.1]">
             Spotless Windows.{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
@@ -94,13 +158,10 @@ export default function Home() {
             </span>{" "}
             Fresh Exteriors.
           </h1>
-
           <p className="mt-6 text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            Professional window cleaning, gutter maintenance &amp; pressure
-            washing for homes and businesses across Central &amp; Northern New
-            Jersey.
+            Professional window cleaning, gutter maintenance &amp; pressure washing for homes
+            and businesses across Central &amp; Northern New Jersey.
           </p>
-
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/quote"
@@ -117,7 +178,6 @@ export default function Home() {
               (862) 202-0908
             </a>
           </div>
-
           {/* Trust badges */}
           <div className="mt-16 flex flex-wrap items-center justify-center gap-8 text-sm text-gray-500">
             <div className="flex items-center gap-2">
@@ -143,15 +203,12 @@ export default function Home() {
             <p className="text-sm font-semibold uppercase tracking-wider text-blue-400 mb-3">
               What We Do
             </p>
-            <h2 className="text-3xl md:text-5xl font-extrabold text-white">
-              Our Services
-            </h2>
+            <h2 className="text-3xl md:text-5xl font-extrabold text-white">Our Services</h2>
             <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
-              From sparkling windows to clean gutters and pristine exteriors — we
-              handle it all so you don&apos;t have to.
+              From sparkling windows to clean gutters and pristine exteriors — we handle it all
+              so you don&apos;t have to.
             </p>
           </div>
-
           <div className="grid md:grid-cols-3 gap-6">
             {services.map((service) => (
               <div
@@ -161,12 +218,8 @@ export default function Home() {
                 <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-600/20 to-cyan-500/20 border border-blue-500/20 flex items-center justify-center mb-6">
                   <service.icon className="w-7 h-7 text-blue-400" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-1">
-                  {service.title}
-                </h3>
-                <p className="text-blue-400 text-sm font-semibold mb-3">
-                  {service.price}
-                </p>
+                <h3 className="text-xl font-bold text-white mb-1">{service.title}</h3>
+                <p className="text-blue-400 text-sm font-semibold mb-3">{service.price}</p>
                 <p className="text-gray-400 text-sm leading-relaxed mb-5">
                   {service.description}
                 </p>
@@ -184,13 +237,13 @@ export default function Home() {
               </div>
             ))}
           </div>
-
           <div className="text-center mt-12">
             <Link
               href="/services"
               className="inline-flex items-center gap-2 text-blue-400 font-semibold hover:text-blue-300 transition-colors"
             >
-              View All Services &amp; Pricing <ArrowRight className="w-4 h-4" />
+              View All Services &amp; Pricing
+              <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
@@ -208,16 +261,15 @@ export default function Home() {
                 Online Special
               </div>
               <h2 className="text-3xl md:text-5xl font-extrabold text-white leading-tight">
-                $350{" "}
+                $425{" "}
                 <span className="text-gray-400 text-2xl md:text-3xl font-normal">
                   for up to 30 exterior windows
                 </span>
               </h2>
               <p className="mt-4 text-gray-400 text-lg">
-                Professional exterior window cleaning at an unbeatable price.
-                Book online and save.
+                Professional exterior window cleaning at an unbeatable price. Book online and
+                save.
               </p>
-
               <div className="mt-8 space-y-4">
                 <div className="flex items-center gap-3 p-4 rounded-xl bg-green-500/5 border border-green-500/20">
                   <DollarSign className="w-6 h-6 text-green-400 shrink-0" />
@@ -239,11 +291,10 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
             <div className="flex flex-col items-center">
               <div className="w-full max-w-md p-8 rounded-2xl bg-card-bg border border-card-border text-center">
                 <p className="text-sm text-gray-400 mb-2">Starting at</p>
-                <p className="text-6xl font-extrabold text-white">$350</p>
+                <p className="text-6xl font-extrabold text-white">$425</p>
                 <p className="text-gray-400 mt-2">Up to 30 exterior windows</p>
                 <div className="mt-6 space-y-2 text-left">
                   <div className="flex items-center gap-2 text-sm text-gray-300">
@@ -260,7 +311,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-center gap-2 text-sm text-green-400">
                     <CheckCircle2 className="w-4 h-4" />
-                    Stack discounts — pay as low as $250!
+                    Stack discounts — pay as low as $325!
                   </div>
                 </div>
                 <Link
@@ -287,9 +338,9 @@ export default function Home() {
               Can&apos;t Visit? No Problem.
             </h2>
             <p className="text-gray-400 max-w-xl mx-auto mb-8">
-              Schedule a phone consultation and we&apos;ll use Google Earth to
-              assess your property remotely. Get an accurate estimate without
-              anyone having to come to your home.
+              Schedule a phone consultation and we&apos;ll use Google Earth to assess your
+              property remotely. Get an accurate estimate without anyone having to come to your
+              home.
             </p>
             <a
               href="https://calendly.com/ezhomeservices"
@@ -318,7 +369,6 @@ export default function Home() {
               The EZ Difference
             </h2>
           </div>
-
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
@@ -349,9 +399,7 @@ export default function Home() {
                 <div className="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center mx-auto mb-4">
                   <item.icon className="w-6 h-6 text-blue-400" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2">
-                  {item.title}
-                </h3>
+                <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
                 <p className="text-sm text-gray-400">{item.desc}</p>
               </div>
             ))}
@@ -370,7 +418,6 @@ export default function Home() {
               What Our Customers Say
             </h2>
           </div>
-
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((t) => (
               <div
@@ -379,10 +426,7 @@ export default function Home() {
               >
                 <div className="flex gap-1 mb-4">
                   {Array.from({ length: t.rating }).map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-5 h-5 text-yellow-400 fill-yellow-400"
-                    />
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
                   ))}
                 </div>
                 <p className="text-gray-300 text-sm leading-relaxed mb-5">
@@ -398,6 +442,47 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-20 md:py-28">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <p className="text-sm font-semibold uppercase tracking-wider text-blue-400 mb-3">
+              FAQ
+            </p>
+            <h2 className="text-3xl md:text-5xl font-extrabold text-white">
+              Frequently Asked Questions
+            </h2>
+            <p className="mt-4 text-gray-400 max-w-xl mx-auto">
+              Everything you need to know about our exterior cleaning services in NJ.
+            </p>
+          </div>
+          <div className="space-y-4">
+            {faqItems.map((item) => (
+              <div
+                key={item.question}
+                className="p-6 rounded-2xl bg-card-bg border border-card-border"
+              >
+                <h3 className="text-white font-bold text-lg mb-3">{item.question}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">{item.answer}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <p className="text-gray-500 text-sm">
+              Have more questions?{" "}
+              <a href="tel:8622020908" className="text-blue-400 hover:text-blue-300 font-semibold">
+                Call us at (862) 202-0908
+              </a>{" "}
+              or{" "}
+              <Link href="/contact" className="text-blue-400 hover:text-blue-300 font-semibold">
+                send a message
+              </Link>
+              .
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 md:py-28 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-cyan-500/5" />
@@ -406,8 +491,8 @@ export default function Home() {
             Ready for Spotless Windows?
           </h2>
           <p className="mt-4 text-lg text-gray-400">
-            Get a free, no-obligation quote in minutes. We serve all of Central
-            &amp; Northern New Jersey.
+            Get a free, no-obligation quote in minutes. We serve all of Central &amp; Northern
+            New Jersey.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link

@@ -14,14 +14,14 @@ import {
 // We'll use a separate metadata file for this page.
 
 const serviceOptions = [
-  { id: "ext_windows", label: "Exterior Window Cleaning (up to 30)", price: "$350" },
-  { id: "int_ext_windows", label: "Interior & Exterior Windows (up to 30)", price: "$550" },
-  { id: "gutter_single", label: "Gutter Cleaning — Single Story", price: "$175" },
-  { id: "gutter_two", label: "Gutter Cleaning — Two Story", price: "$250" },
-  { id: "driveway", label: "Driveway Pressure Wash", price: "$200" },
-  { id: "sidewalk", label: "Sidewalk / Walkway Pressure Wash", price: "$100" },
-  { id: "deck", label: "Deck / Patio Pressure Wash", price: "$150" },
-  { id: "siding", label: "House Siding Soft Wash", price: "$450" },
+  { id: "ext_windows", label: "Exterior Window Cleaning (up to 30)", price: "$425" },
+  { id: "int_ext_windows", label: "Interior & Exterior Windows (up to 30)", price: "$625" },
+  { id: "gutter_single", label: "Gutter Cleaning — Single Story", price: "$250" },
+  { id: "gutter_two", label: "Gutter Cleaning — Two Story", price: "$325" },
+  { id: "driveway", label: "Driveway Pressure Wash", price: "$275" },
+  { id: "sidewalk", label: "Sidewalk / Walkway Pressure Wash", price: "$175" },
+  { id: "deck", label: "Deck / Patio Pressure Wash", price: "$225" },
+  { id: "siding", label: "House Siding Soft Wash", price: "$525" },
 ];
 
 const addOnOptions = [
@@ -29,8 +29,8 @@ const addOnOptions = [
   { id: "tracks", label: "Track & Sill Deep Clean", price: "$75" },
   { id: "hardwater", label: "Hard Water Stain Removal", price: "$15/window" },
   { id: "downspout", label: "Downspout Unclogging", price: "$75" },
-  { id: "fence", label: "Fence Cleaning", price: "$150+" },
-  { id: "sealing", label: "Surface Sealing", price: "From $200" },
+  { id: "fence", label: "Fence Cleaning", price: "$225+" },
+  { id: "sealing", label: "Surface Sealing", price: "From $275" },
 ];
 
 export default function QuotePage() {

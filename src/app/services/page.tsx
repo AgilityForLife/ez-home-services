@@ -13,7 +13,7 @@ import {
 export const metadata: Metadata = {
   title: "Services & Pricing | Window Cleaning, Gutter & Pressure Washing",
   description:
-    "Transparent pricing for professional window cleaning (from $350), gutter cleaning (from $175), and pressure washing (from $150) in Central & Northern NJ. No hidden fees. Free estimates.",
+    "Transparent pricing for professional window cleaning (from $425), gutter cleaning (from $250), and pressure washing (from $225) in Central & Northern NJ. No hidden fees. Free estimates.",
   alternates: {
     canonical: "https://ezhomeservices.business/services",
   },
@@ -35,8 +35,8 @@ const services = [
     description:
       "Our professional window cleaning service delivers streak-free, sparkling results for both residential and commercial properties. We use purified water-fed pole systems and traditional squeegee techniques depending on your property's needs.",
     pricing: [
-      { label: "Exterior Only (up to 30 windows)", price: "$350", note: "Online Special" },
-      { label: "Interior & Exterior (up to 30 windows)", price: "$550", note: "" },
+      { label: "Exterior Only (up to 30 windows)", price: "$425", note: "Online Special" },
+      { label: "Interior & Exterior (up to 30 windows)", price: "$625", note: "" },
       { label: "Additional windows", price: "$12/window", note: "" },
       { label: "Screen cleaning", price: "$5/screen", note: "Add-on" },
       { label: "Track & sill cleaning", price: "$75", note: "Add-on" },
@@ -58,9 +58,9 @@ const services = [
     description:
       "Clogged gutters can lead to costly water damage, foundation issues, and pest infestations. Our thorough gutter cleaning service removes all debris, flushes downspouts, and includes a visual inspection for any issues.",
     pricing: [
-      { label: "Single-story home", price: "$175", note: "" },
-      { label: "Two-story home", price: "$250", note: "" },
-      { label: "Large / multi-story home", price: "$350+", note: "Custom quote" },
+      { label: "Single-story home", price: "$250", note: "" },
+      { label: "Two-story home", price: "$325", note: "" },
+      { label: "Large / multi-story home", price: "$425+", note: "Custom quote" },
       { label: "Downspout unclogging", price: "$75", note: "Add-on" },
       { label: "Gutter guard inspection", price: "Free", note: "With service" },
     ],
@@ -81,11 +81,11 @@ const services = [
     description:
       "Years of dirt, mold, algae, and grime can make your property look run-down. Our professional pressure washing (and soft washing for delicate surfaces) brings everything back to life safely and effectively.",
     pricing: [
-      { label: "Driveway (standard 2-car)", price: "$200", note: "" },
-      { label: "Sidewalk / walkway", price: "$100", note: "" },
-      { label: "Deck or patio (up to 200 sq ft)", price: "$150", note: "" },
-      { label: "House siding (soft wash)", price: "$450", note: "Avg. home" },
-      { label: "Fence cleaning", price: "$150", note: "Add-on" },
+      { label: "Driveway (standard 2-car)", price: "$275", note: "" },
+      { label: "Sidewalk / walkway", price: "$175", note: "" },
+      { label: "Deck or patio (up to 200 sq ft)", price: "$225", note: "" },
+      { label: "House siding (soft wash)", price: "$525", note: "Avg. home" },
+      { label: "Fence cleaning", price: "$225", note: "Add-on" },
     ],
     features: [
       "Hot & cold water pressure washing",
@@ -103,8 +103,8 @@ const addOns = [
   { name: "Track & Sill Detail", price: "$75", desc: "Deep clean all window tracks & sills" },
   { name: "Hard Water Stain Removal", price: "$15/window", desc: "Mineral deposit removal" },
   { name: "Downspout Unclogging", price: "$75", desc: "Add to gutter service" },
-  { name: "Fence Cleaning", price: "$150+", desc: "Add to pressure washing" },
-  { name: "Surface Sealing", price: "From $200", desc: "Post-pressure wash protective seal" },
+  { name: "Fence Cleaning", price: "$225+", desc: "Add to pressure washing" },
+  { name: "Surface Sealing", price: "From $275", desc: "Post-pressure wash protective seal" },
 ];
 
 // Service Schema for rich results

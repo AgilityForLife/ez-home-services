@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | EZ Home Services",
   },
   description:
-    "Professional window cleaning, gutter maintenance, and pressure washing services in Central & Northern New Jersey. Licensed & insured. Online special: $350 for up to 30 exterior windows. Call 862-202-0908 for a free estimate.",
+    "Professional window cleaning, gutter maintenance, and pressure washing services in Central & Northern New Jersey. Licensed & insured. Online special: $425 for up to 30 exterior windows. Call 862-202-0908 for a free estimate.",
   keywords: [
     "window cleaning",
     "gutter cleaning",
@@ -180,11 +180,11 @@ const jsonLd = {
               description:
                 "Professional exterior window cleaning for up to 30 windows using water-fed pole systems and hand-squeegee techniques. Streak-free guarantee.",
             },
-            price: "350.00",
+            price: "425.00",
             priceCurrency: "USD",
             priceSpecification: {
               "@type": "UnitPriceSpecification",
-              price: "350.00",
+              price: "425.00",
               priceCurrency: "USD",
               unitText: "up to 30 windows",
             },
@@ -197,7 +197,7 @@ const jsonLd = {
               description:
                 "Complete interior and exterior window cleaning for residential and commercial properties.",
             },
-            price: "550.00",
+            price: "625.00",
             priceCurrency: "USD",
           },
           {
@@ -208,7 +208,7 @@ const jsonLd = {
               description:
                 "Thorough gutter cleaning, debris removal, downspout flushing, and visual inspection for residential homes.",
             },
-            price: "175.00",
+            price: "250.00",
             priceCurrency: "USD",
           },
           {
@@ -219,7 +219,7 @@ const jsonLd = {
               description:
                 "Professional pressure washing and soft washing for driveways, sidewalks, patios, decks, and house siding.",
             },
-            price: "150.00",
+            price: "225.00",
             priceCurrency: "USD",
           },
         ],
@@ -267,11 +267,9 @@ const jsonLd = {
         },
       ],
       sameAs: [
-        // Add your actual social/directory profile URLs here as you create them
-        // "https://www.facebook.com/ezhomeservices",
-        // "https://www.instagram.com/ezhomeservices",
-        // "https://www.yelp.com/biz/ez-home-services-bloomfield",
-        // "https://www.bbb.org/us/nj/bloomfield/profile/ez-home-services",
+        "https://www.facebook.com/EZHomeServicesNJ",
+        "https://www.instagram.com/ezhomeservicesnj",
+        "https://www.yelp.com/biz/ez-home-services-bloomfield",
         "https://calendly.com/ezhomeservices",
       ],
       knowsAbout: [
