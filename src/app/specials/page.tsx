@@ -20,12 +20,12 @@ const addOns = [
   { id: "screens", name: "Screen Cleaning (per screen)", price: 5, unit: "each" },
   { id: "tracks", name: "Track & Sill Deep Clean", price: 75, unit: "flat" },
   { id: "hardwater", name: "Hard Water Stain Removal (per window)", price: 15, unit: "each" },
-  { id: "gutter_single", name: "Gutter Cleaning — Single Story", price: 175, unit: "flat" },
-  { id: "gutter_two", name: "Gutter Cleaning — Two Story", price: 250, unit: "flat" },
-  { id: "driveway", name: "Driveway Pressure Wash", price: 200, unit: "flat" },
-  { id: "sidewalk", name: "Sidewalk / Walkway Pressure Wash", price: 100, unit: "flat" },
-  { id: "deck", name: "Deck / Patio Pressure Wash (up to 200 sq ft)", price: 150, unit: "flat" },
-  { id: "siding", name: "House Siding Soft Wash", price: 450, unit: "flat" },
+  { id: "gutter_single", name: "Gutter Cleaning — Single Story", price: 250, unit: "flat" },
+  { id: "gutter_two", name: "Gutter Cleaning — Two Story", price: 325, unit: "flat" },
+  { id: "driveway", name: "Driveway Pressure Wash", price: 275, unit: "flat" },
+  { id: "sidewalk", name: "Sidewalk / Walkway Pressure Wash", price: 175, unit: "flat" },
+  { id: "deck", name: "Deck / Patio Pressure Wash (up to 200 sq ft)", price: 225, unit: "flat" },
+  { id: "siding", name: "House Siding Soft Wash", price: 525, unit: "flat" },
 ];
 
 export default function SpecialsPage() {
@@ -33,7 +33,7 @@ export default function SpecialsPage() {
   const [googleReview, setGoogleReview] = useState(false);
   const [cashPayment, setCashPayment] = useState(false);
 
-  const basePrice = 350;
+  const basePrice = 425;
 
   const addOnTotal = Object.entries(selectedAddOns).reduce((sum, [id, qty]) => {
     const addon = addOns.find((a) => a.id === id);
@@ -111,7 +111,7 @@ export default function SpecialsPage() {
                     </p>
                   </div>
                   <p className="text-2xl font-extrabold text-white whitespace-nowrap">
-                    $350
+                    $425
                   </p>
                 </div>
               </div>
@@ -294,7 +294,7 @@ export default function SpecialsPage() {
                     <span className="text-gray-300">
                       Exterior Window Cleaning
                     </span>
-                    <span className="text-white font-medium">$350</span>
+                    <span className="text-white font-medium">$425</span>
                   </div>
                   {Object.entries(selectedAddOns).map(([id, qty]) => {
                     const addon = addOns.find((a) => a.id === id);
