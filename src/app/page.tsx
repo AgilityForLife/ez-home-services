@@ -21,7 +21,7 @@ const services = [
     description:
       "Crystal-clear windows inside & out. Residential and commercial properties. We use professional-grade equipment for a streak-free shine every time.",
     features: ["Interior & Exterior", "Screen Cleaning", "Track & Sill Cleaning"],
-    price: "From $350",
+    price: "From $425",
   },
   {
     icon: Sparkles,
@@ -29,7 +29,7 @@ const services = [
     description:
       "Protect your home from water damage. Complete gutter cleaning, flushing, and minor repairs to keep your drainage system working perfectly.",
     features: ["Debris Removal", "Downspout Flushing", "Minor Repairs"],
-    price: "From $175",
+    price: "From $250",
   },
   {
     icon: Shield,
@@ -37,7 +37,7 @@ const services = [
     description:
       "Restore your property's curb appeal. Driveways, sidewalks, patios, decks, siding — we blast away years of grime safely and effectively.",
     features: ["Driveways & Walkways", "Decks & Patios", "House Siding"],
-    price: "From $150",
+    price: "From $225",
   },
 ];
 
@@ -66,7 +66,7 @@ const faqItems = [
   {
     question: "How much does window cleaning cost in NJ?",
     answer:
-      "EZ Home Services offers exterior window cleaning starting at $350 for up to 30 windows. Interior & exterior cleaning starts at $550. Stack our Google review discount ($50 off) and cash payment discount ($50 off) to pay as low as $250.",
+      "EZ Home Services offers exterior window cleaning starting at $425 for up to 30 windows. Interior & exterior cleaning starts at $625. Stack our Google review discount ($50 off) and cash payment discount ($50 off) to pay as low as $325.",
   },
   {
     question: "Are you licensed and insured in New Jersey?",
@@ -149,7 +149,7 @@ export default function Home() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-sm font-medium mb-8">
             <Sparkles className="w-4 h-4" />
-            Online Special — $350 for up to 30 Exterior Windows
+            Online Special — $425 for up to 30 Exterior Windows
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-white max-w-5xl mx-auto leading-[1.1]">
             Spotless Windows.{" "}
@@ -261,7 +261,7 @@ export default function Home() {
                 Online Special
               </div>
               <h2 className="text-3xl md:text-5xl font-extrabold text-white leading-tight">
-                $350{" "}
+                $425{" "}
                 <span className="text-gray-400 text-2xl md:text-3xl font-normal">
                   for up to 30 exterior windows
                 </span>
@@ -294,7 +294,7 @@ export default function Home() {
             <div className="flex flex-col items-center">
               <div className="w-full max-w-md p-8 rounded-2xl bg-card-bg border border-card-border text-center">
                 <p className="text-sm text-gray-400 mb-2">Starting at</p>
-                <p className="text-6xl font-extrabold text-white">$350</p>
+                <p className="text-6xl font-extrabold text-white">$425</p>
                 <p className="text-gray-400 mt-2">Up to 30 exterior windows</p>
                 <div className="mt-6 space-y-2 text-left">
                   <div className="flex items-center gap-2 text-sm text-gray-300">
@@ -311,7 +311,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-center gap-2 text-sm text-green-400">
                     <CheckCircle2 className="w-4 h-4" />
-                    Stack discounts — pay as low as $250!
+                    Stack discounts — pay as low as $325!
                   </div>
                 </div>
                 <Link
