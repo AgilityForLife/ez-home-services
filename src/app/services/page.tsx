@@ -133,13 +133,13 @@ const serviceJsonLd = {
           {
             "@type": "Offer",
             name: "Exterior Only (up to 30 windows)",
-            price: "350.00",
+            price: "425.00",
             priceCurrency: "USD",
           },
           {
             "@type": "Offer",
             name: "Interior & Exterior (up to 30 windows)",
-            price: "550.00",
+            price: "625.00",
             priceCurrency: "USD",
           },
         ],
@@ -165,13 +165,13 @@ const serviceJsonLd = {
           {
             "@type": "Offer",
             name: "Single-story home",
-            price: "175.00",
+            price: "250.00",
             priceCurrency: "USD",
           },
           {
             "@type": "Offer",
             name: "Two-story home",
-            price: "250.00",
+            price: "325.00",
             priceCurrency: "USD",
           },
         ],
@@ -197,13 +197,13 @@ const serviceJsonLd = {
           {
             "@type": "Offer",
             name: "Driveway (standard 2-car)",
-            price: "200.00",
+            price: "275.00",
             priceCurrency: "USD",
           },
           {
             "@type": "Offer",
             name: "House siding (soft wash)",
-            price: "450.00",
+            price: "525.00",
             priceCurrency: "USD",
           },
         ],
